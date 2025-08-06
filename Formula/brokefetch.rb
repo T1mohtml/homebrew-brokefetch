@@ -9,6 +9,7 @@ class Brokefetch < Formula
 
   def install
     bin.install "brokefetch.sh" => "brokefetch"
+    bin.install "brokefetch_EDGE.sh" => "brokefetch-edge"
   end
 
   test do
