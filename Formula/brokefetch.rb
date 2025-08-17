@@ -4,7 +4,7 @@ class Brokefetch < Formula
   url "https://github.com/T1mohtml/brokefetch/archive/refs/tags/release1.7.4.zip"
   sha256 "01faaba3abfe2b11ecd8b74f1b70bf753940d552ec56c9ec52f6b3db8d50dc63"
   license "MIT"
-  version "1.7.4"
+  version "1.7.4.1"
 
   depends_on "bash"
 
