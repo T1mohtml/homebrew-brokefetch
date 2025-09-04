@@ -1,9 +1,9 @@
 class Brokefetch < Formula
   desc "Funny minimal fetch script"
   homepage "https://github.com/T1mohtml/brokefetch"
-  version "2025.08.27-1.1"
-  url "https://github.com/Szerwigi1410/brokefetch/archive/refs/tags/2025.08.27-1.tar.gz"
-  sha256 "d6d59a45511317b93efdaee6636ce914aae18069b6434a5a21cda0a4e72c8d37"
+  version "2025.09.02-1.1"
+  url "https://github.com/Szerwigi1410/brokefetch/archive/refs/tags/2025.09.02.tar.gz"
+  sha256 "035b6973ac5408044221c700438c641d5c8f57e70e6873abe33c7b4306f818e7"
   license "MIT"
 
   depends_on "bash"
