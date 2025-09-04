@@ -7,6 +7,7 @@ class Brokefetch < Formula
   license "MIT"
 
   depends_on "bash"
+  depends_on "gawk"
 
   def install
     bin.install "brokefetch.sh" => "brokefetch"
