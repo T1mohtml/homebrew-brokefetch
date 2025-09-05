@@ -13,9 +13,8 @@ class Brokefetch < Formula
     bin.install "brokefetch_beta.sh" => "brokefetch-beta"
     bin.install "brokefetch_mod.sh" => "brokefetch-mod"
 
-    chmod 0755, bin/"brokefetch"
-    chmod 0755, bin/"brokefetch-beta"
-    chmod 0755, bin/"brokefetch-mod"
+    # Ensure scripts are executable
+    bin.children.each { |f| chmod 0755, f }
 
     pkgshare.install "logos"
   end
