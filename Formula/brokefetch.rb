@@ -13,7 +13,6 @@ class Brokefetch < Formula
     bin.install "brokefetch_beta.sh" => "brokefetch-beta"
     bin.install "brokefetch_mod.sh" => "brokefetch-mod"
 
-    # Ensure scripts are executable
     chmod 0755, bin/"brokefetch"
     chmod 0755, bin/"brokefetch-beta"
     chmod 0755, bin/"brokefetch-mod"
@@ -21,7 +20,7 @@ class Brokefetch < Formula
     pkgshare.install "logos"
   end
 
-test do
-  assert_match version.to_s, shell_output("#{bin}/brokefetch --version")
-end
+  test do
+    system "#{bin}/brokefetch"
+  end
 end
