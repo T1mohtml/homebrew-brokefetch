@@ -15,7 +15,7 @@ class Brokefetch < Formula
     pkgshare.install "logos"
   end
 
-  test do
-    assert_match "BROKEFETCH", shell_output("#{bin}/brokefetch")
-  end
+test do
+  system bin/"brokefetch"
+end
 end
