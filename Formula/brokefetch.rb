@@ -12,14 +12,10 @@ class Brokefetch < Formula
     bin.install "brokefetch.sh" => "brokefetch"
     bin.install "brokefetch_beta.sh" => "brokefetch-beta"
     bin.install "brokefetch_mod.sh" => "brokefetch-mod"
-
-    # Ensure scripts are executable
-    bin.children.each { |f| chmod 0755, f }
-
     pkgshare.install "logos"
   end
 
   test do
-    system "#{bin}/brokefetch"
+    assert_match "BROKEFETCH", shell_output("#{bin}/brokefetch")
   end
 end
