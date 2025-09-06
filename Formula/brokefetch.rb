@@ -11,6 +11,7 @@ class Brokefetch < Formula
 def install
   chmod 0755, "brokefetch_beta.sh"
   chmod 0755, "brokefetch_mod.sh"
+  chmod 0755, "brokefetch.sh"
   bin.install "brokefetch.sh" => "brokefetch"
   bin.install "brokefetch_beta.sh" => "brokefetch-beta"
   bin.install "brokefetch_mod.sh" => "brokefetch-mod"
