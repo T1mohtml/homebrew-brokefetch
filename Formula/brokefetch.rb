@@ -8,12 +8,14 @@ class Brokefetch < Formula
   depends_on "bash"
   depends_on "gawk"
 
-  def install
-    bin.install "brokefetch.sh" => "brokefetch"
-    bin.install "brokefetch_beta.sh" => "brokefetch-beta"
-    bin.install "brokefetch_mod.sh" => "brokefetch-mod"
-    pkgshare.install "logos"
-  end
+def install
+  chmod 0755, "brokefetch_beta.sh"
+  chmod 0755, "brokefetch_mod.sh"
+  bin.install "brokefetch.sh" => "brokefetch"
+  bin.install "brokefetch_beta.sh" => "brokefetch-beta"
+  bin.install "brokefetch_mod.sh" => "brokefetch-mod"
+  pkgshare.install "logos"
+end
 
 test do
   system bin/"brokefetch"
