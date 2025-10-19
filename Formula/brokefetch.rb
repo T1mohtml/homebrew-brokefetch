@@ -1,26 +1,24 @@
 class Brokefetch < Formula
-  desc "Funny minimal fetch script"
+  desc "The only fetch tool that doesn't pretend like your life is ok"
   homepage "https://github.com/T1mohtml/brokefetch"
-  url "https://github.com/T1mohtml/brokefetch/archive/refs/tags/2025.09.05.tar.gz"
-  sha256 "0581536e43ea1700132fd31cd1b2713b0dcad7a57fe77b78283a409cefcfe00d"
+  url "https://github.com/T1mohtml/brokefetch/archive/refs/tags/2025.09.14-1.tar.gz"
+  sha256 "fc607de5f8403e8cba3228d710477c873d05adb2fa16aecf3f20c71990d1010a"
   license "MIT"
 
-  depends_on "bash"
   depends_on "gawk"
 
-def install
-  chmod 0755, "brokefetch_beta.sh"
-  chmod 0755, "brokefetch_mod.sh"
-  chmod 0755, "brokefetch.sh"
-  chmod 0755, "brokefetch_beta.sh"
-  chmod 0755, "brokefetch_mod.sh"
-  bin.install "brokefetch.sh" => "brokefetch"
-  bin.install "brokefetch_beta.sh" => "brokefetch-beta"
-  bin.install "brokefetch_mod.sh" => "brokefetch-mod"
-  pkgshare.install "logos"
-end
+  def install
+    # Install scripts with simpler names
+    bin.install "brokefetch.sh" => "brokefetch"
+    bin.install "brokefetch_beta.sh" => "brokefetch-beta"
 
-test do
-  system bin/"brokefetch"
-end
+    chmod 0755, bin/"brokefetch"
+    chmod 0755, bin/"brokefetch-beta"
+  end
+
+  test do
+    # Run the main script and check it outputs something containing "broke"
+    output = shell_output("#{bin}/brokefetch")
+    assert_match /broke/i, output
+  end
 end
