@@ -2,6 +2,7 @@ class Brokefetch < Formula
   desc "The only fetch tool that doesn't pretend like your life is ok"
   homepage "https://github.com/T1mohtml/brokefetch"
   url "https://github.com/T1mohtml/brokefetch/archive/refs/tags/2025.09.14-1.tar.gz"
+  version "2025.09.14-1"
   sha256 "fc607de5f8403e8cba3228d710477c873d05adb2fa16aecf3f20c71990d1010a"
   license "MIT"
 
